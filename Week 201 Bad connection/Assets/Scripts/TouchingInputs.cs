@@ -17,7 +17,7 @@ public class TouchingInputs : MonoBehaviour
 
     private void Update()
     {
-        if(inputEnabled == false)
+        if(inputEnabled == true)
         {
             if (Input.touchCount > 0)
             {
