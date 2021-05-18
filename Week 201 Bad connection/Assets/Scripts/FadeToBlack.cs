@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FadeToBlack : MonoBehaviour
 {
@@ -18,6 +16,6 @@ public class FadeToBlack : MonoBehaviour
     }
     public void StartFadeToClear()
     {
-        fadeToBlackAnimator.SetTrigger("FadeToClear");  
+        fadeToBlackAnimator.SetTrigger("FadeToClear");
     }
 }

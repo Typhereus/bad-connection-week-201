@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public static class ExtensionMethods
 {
@@ -32,7 +29,7 @@ public static class ExtensionMethods
         Vector3 pos = Camera.main.ScreenToWorldPoint(touchPixelPos);
 
         Vector3 touchPos = new Vector3(-pos.x, -pos.y, 0);
-        
+
         return touchPos;
     }
     public static Vector3 WorldPositionWithMainCameraClick()

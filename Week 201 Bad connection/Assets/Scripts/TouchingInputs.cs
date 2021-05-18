@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TouchingInputs : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class TouchingInputs : MonoBehaviour
 
     private void Update()
     {
-        if(inputEnabled == true)
+        if (inputEnabled == true)
         {
             if (Input.touchCount > 0)
             {

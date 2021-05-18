@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TheGameManager : MonoBehaviour
 {
@@ -23,11 +21,13 @@ public class TheGameManager : MonoBehaviour
 
         Invoke("ShowAndBlank", lengthOfTimeToShowBodyParts);
     }
+
     public void ShowAndBlank()
     {
         FadeToBlack.Instance.StartFadeToBlack();
         Invoke("ShowBlank", 1f);
     }
+
     private void ShowBlank()
     {
         RandomBodyPartPlacement.Instance.MemoryGameSpawnPlacingParts();
