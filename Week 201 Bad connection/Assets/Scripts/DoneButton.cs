@@ -16,11 +16,18 @@ public class DoneButton : MonoBehaviour
 
     private static void Check(List<float> distances, List<string> names)
     {
+        int counter = 0;
+
         for (int i = 0; i < distances.Count; i++)
         {
             if (distances[i] >= 0 && distances[i] <= 1)
             {
-                Debug.Log(names[i] + " is near the exact point");
+                Debug.Log(names[i] + " is near the exact point"); //DEBUG
+                counter++;
+                if (counter >= RandomBodyPartPlacement.Instance.amountOfBodyPartsToPlace)
+                {
+                    FindObjectOfType<LevelLoader>().LoadWinScreen();
+                }
             }
         }
     }

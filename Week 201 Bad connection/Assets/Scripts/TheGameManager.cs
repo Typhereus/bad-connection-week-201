@@ -33,7 +33,6 @@ public class TheGameManager : MonoBehaviour
         RandomBodyPartPlacement.Instance.MemoryGameSpawnPlacingParts();
         RandomBodyPartPlacement.Instance.RemovePreview();
         doneGroup.TurnOn();
-        TouchingInputs.Instance.inputEnabled = true;
         FadeToBlack.Instance.StartFadeToClear();
     }
 }

@@ -85,7 +85,7 @@ public class RandomBodyPartPlacement : MonoBehaviour
         foreach (var item in currentMemoryGroup)
         {
             GameObject goToSpawn = allUniqueBodyPartsPrefabs.Find(x => x.GetComponent<BodyPartGameObject>().bodyPartType == item.type);
-            Instantiate(goToSpawn, partsToPlacePositions[iterator].transform.position, Quaternion.identity, partsToPlacePositions[iterator].transform);
+            var part = Instantiate(goToSpawn, partsToPlacePositions[iterator].transform.position, Quaternion.identity, partsToPlacePositions[iterator].transform);
 
             iterator++;
         }
