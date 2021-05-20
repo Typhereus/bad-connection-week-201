@@ -20,13 +20,15 @@ public class DoneButton : MonoBehaviour
 
         for (int i = 0; i < distances.Count; i++)
         {
+            //Debug.Log("AAAAAA"); //DEBUG
             if (distances[i] >= 0 && distances[i] <= 1)
             {
                 Debug.Log(names[i] + " is near the exact point"); //DEBUG
+                Handheld.Vibrate();
                 counter++;
                 if (counter >= RandomBodyPartPlacement.Instance.amountOfBodyPartsToPlace)
                 {
-                    FindObjectOfType<LevelLoader>().LoadWinScreen();
+                    FindObjectOfType<LevelLoader>().LoadNextLevel();
                 }
             }
         }
@@ -38,9 +40,10 @@ public class DoneButton : MonoBehaviour
         {
             for (int j = 0; j < currentPos.Count; j++)
             {
-                if (names[i].Contains(RandomBodyPartPlacement.Instance.currentMemoryGroup[j].type.ToString()))
+                if(names[i].Contains(RandomBodyPartPlacement.Instance.currentMemoryGroup[j].type.ToString()))
                 {
                     distances.Add(Vector3.Distance(currentPos[i], RandomBodyPartPlacement.Instance.currentMemoryGroup[j].position));
+                    //Debug.Log("Added!"); //DEBUG
                 }
             }
         }

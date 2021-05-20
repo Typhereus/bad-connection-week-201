@@ -4,11 +4,16 @@ public class BodyPartGameObject : MonoBehaviour
 {
     public enum BodyPartType
     {
-        Kidney,
+        RightArm,
+        LeftArm,
+        RightLeg,
+        LeftFoot,
+        Leg,
+        Eye,
+        Wing,
         Heart,
-        Lung,
-        Spleen,
-        Pancreas,
+        Intestine,
+        Lungs,
     }
     public BodyPartType bodyPartType;
 }

@@ -22,4 +22,14 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Win Screen");
     }
+
+    public void LoadOptionsMenu()
+    {
+        SceneManager.LoadScene("Options Menu");
+    }
+
+    public void LoadCreditsScreen()
+    {
+        SceneManager.LoadScene("Credits Screen");
+    }
 }

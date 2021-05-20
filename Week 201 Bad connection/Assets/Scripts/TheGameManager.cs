@@ -13,7 +13,7 @@ public class TheGameManager : MonoBehaviour
     /// the DONE button is not implemented either
     /// </summary>
     public float lengthOfTimeToShowBodyParts = 5f;
-    public CanvasGroup doneGroup;
+    public CanvasGroup ButtonsGroup;
 
     private void Start()
     {
@@ -32,7 +32,7 @@ public class TheGameManager : MonoBehaviour
     {
         RandomBodyPartPlacement.Instance.MemoryGameSpawnPlacingParts();
         RandomBodyPartPlacement.Instance.RemovePreview();
-        doneGroup.TurnOn();
+        ButtonsGroup.TurnOn();
         FadeToBlack.Instance.StartFadeToClear();
     }
 }
